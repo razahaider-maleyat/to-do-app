@@ -24,12 +24,6 @@ type props = {
 };
 
 export default function AddData({ open, handleClose }: props) {
-  const [insertData, setInsertData] = React.useState("");
-
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const handleData = (e: { preventDefault: () => void }) => {
-    e.preventDefault();
-  };
   return (
     <div>
       <Modal
@@ -48,15 +42,7 @@ export default function AddData({ open, handleClose }: props) {
               label="Standard"
               variant="standard"
             />
-            <Button
-              variant="contained"
-              value={insertData}
-              onChange={(e) => {
-                setInsertData(e.target.value);
-              }}
-            >
-              Add
-            </Button>
+            <Button variant="contained">Add</Button>
           </form>
         </Box>
       </Modal>
