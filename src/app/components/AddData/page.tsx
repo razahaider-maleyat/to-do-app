@@ -20,10 +20,10 @@ const style = {
 type props = {
   handleClose: () => void;
   open: boolean;
-  handleAddData: () => string;
+  editColum: string;
 };
 
-export default function AddData({ open, handleClose }: props) {
+export default function AddData({ editColum, open, handleClose }: props) {
   return (
     <div>
       <Modal
